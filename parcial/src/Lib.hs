@@ -1,5 +1,7 @@
 import Text.Show.Functions
 import Data.Char
+import Data.List
+
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
 
@@ -121,7 +123,7 @@ poderNecesarioParaAprobar :: Barbaro->Int
 poderNecesarioParaAprobar = (*4).length.objetosBarbaro
 
 cantVocales :: String->Int
-cantVocales = length.(++)  vocales -- en lugar de ++ iria intersect 
+cantVocales = length.intersect  vocales 
 
 comienzaConMayus :: String->Bool
 comienzaConMayus unaHabilidad =  (== (id.head $ unaHabilidad)).head $ unaHabilidad -- en lugar de id iria toUpper
